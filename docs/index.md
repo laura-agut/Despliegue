@@ -23,20 +23,27 @@ Apuntes y prácticas del módulo **Despliegue de aplicaciones web** de <u>2º de
 | 0.0     | [Raúl Riesco Montes](mailto:r.riesco@edu.gva.es)                            | Versión original de estos apuntes del compañero Raúl Riesco, del IES Severo Ochoa de Elche |
 | Curso23/24    | [José Muñoz Jimeno](https://about.me/jmunozj){:target="_blank"} y Noelia Beltrán Mañas | Adaptación de los materiales a nueva normativa y necesidades del IES El Caminàs.                               |
 | Curso24/25   | [José Muñoz Jimeno](https://about.me/jmunozj){:target="_blank"} | Modificación de los materiales para el nuevo curso escolar.                               |
+| Curso25/26     | Laura Agut Manrique      | Añadidas prácticas propias |
 
 ## Marco normativo
 El presente módulo profesional se enmarca en el 2º curso del título de Técnico Superior en Desarrollo de Aplicaciones Web. Dicho título viene regulado por:
 
 - [Real Decreto 686/2010, de 20 de mayo, por el que se establece el título de Técnico Superior en Desarrollo de Aplicaciones Web y se fijan sus enseñanzas mínimas.](https://www.boe.es/eli/es/rd/2010/05/20/686){:target="_blank"}
 - [Real Decreto 405/2023, de 29 de mayo, por el que se actualizan los títulos de la formación profesional del sistema educativo de Técnico Superior en Desarrollo de Aplicaciones Multiplataforma y Técnico Superior en Desarrollo de Aplicaciones Web, de la familia profesional Informática y Comunicaciones, y se fijan sus enseñanzas mínimas.](https://www.boe.es/eli/es/rd/2023/05/29/405){:target="_blank"}, que modifica el RD 686/2010 en sus artículos 2, 5, 6, 8, 9 y el anexo I, donde se describen los "Resultados de aprendizaje y criterios de evaluación" así como los "Contenidos básicos" y "Orientaciones pedagógicas" de los distintos módulos profesionales que conforman el título.
- 
+- [Real Decreto 500/2024, de 21 de mayo, por el que se modifican determinados reales decretos por los que se establecen títulos de Formación Profesional de grado superior y se fijan sus enseñanzas mínimas.](https://www.boe.es/eli/es/rd/2024/05/21/500){:target="_blank"}
+
 El currículo del módulo viene definido, a nivel autonómico por la siguiente normativa:
 
 - [ORDEN 60/2012, de 25 de septiembre, de la Conselleria de Educación, Formación y Empleo por la que se establece para la Comunitat Valenciana el currículo del ciclo formativo de Grado Superior correspondiente al título de Técnico Superior en Desarrollo de Aplicaciones Web.](https://dogv.gva.es/es/eli/es-vc/o/2012/09/25/60/){:target="_blank"} donde quedan desarrollados los "Contenidos" completos y establecida su duración en la Comunidad Valenciana (80h - 4h/semana durante 20 semanas)
 
 ## Licencia
+Estos apuntes derivan de la obra de [José M. Jiménez](https://jmunozji.github.io/DAW/) 
+bajo licencia [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-Esta obra está bajo una Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional.
+Modificaciones realizadas por Laura Agut en 2025: inclusión de nuevas prácticas y 
+actualización del historial de versiones.
+
+Esta obra mantiene la misma licencia: CC BY-NC-SA 4.0 Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional.
 
 ![licencia](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 
