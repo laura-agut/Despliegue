@@ -1,7 +1,7 @@
 ---
 title: Despliegue de aplicaciones web
 ---
-![](img/DespliegueAplicacionesWeb.png)
+![](img/DespliegueAplicacionesWeb2.png)
 
 ## Índice
 
