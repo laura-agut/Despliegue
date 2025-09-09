@@ -63,8 +63,9 @@ extra_css:
 
 
 
-#nav:
-#  - ... | Ud1 Introduccion/*.md
+nav:
+  - ... | index.md
+  - ... | Ud0 Introduccion/*.md
 #  - ... | Unidad 2/*.md
 #  - ... | Unidad 3/*.md
 #  - ... | Unidad 4/*.md
