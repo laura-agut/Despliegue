@@ -1,9 +1,9 @@
 site_name: Despliegue de aplicaciones web
-site_url: https://jmunozji.github.io/DAW
+site_url: https://laura-agut.github.io/Despliegue
 
 theme:
   name: material
-  logo: assets/logocaminas.png
+  #logo: assets/logocaminas.png
   
   palette: 
     - media: "(prefers-color-scheme: light)"    
@@ -61,10 +61,7 @@ plugins:
 extra_css:
   - stylesheets/extra.css
 
-extra:
-  analytics: 
-      provider: google 
-      property: G-3NX5MD5C8H
+
 
 #nav:
 #  - ... | Ud1 Introduccion/*.md
