@@ -11,28 +11,28 @@ Apuntes y prácticas del módulo <b>Despliegue de aplicaciones web</b> de <u>2º
 
 <ul style="list-style:none; padding:0; margin:0; display:grid; grid-template-columns:1fr; gap:.3rem; max-width:700px;">
   <li style="background:#f8fafc; border:1px solid #e5e7eb; border-radius:6px;">
-    <a href="Ud0_Introduccion.md" style="display:block; padding:.45rem .65rem; text-decoration:none;">0 – Introducción</a>
+    <a href="Ud0 Introduccion/Ud0_1Introalmodulo/" style="display:block; padding:.45rem .65rem; text-decoration:none;">0 – Introducción</a>
   </li>
   <li style="background:#f8fafc; border:1px solid #e5e7eb; border-radius:6px;">
-    <a href="Ud1_ControlVersiones.md" style="display:block; padding:.45rem .65rem; text-decoration:none;">1 – Control de versiones</a>
+    <a href="Ud1 ControlVersiones/T01_index_git/" style="display:block; padding:.45rem .65rem; text-decoration:none;">1 – Control de versiones</a>
   </li>
   <li style="background:#f8fafc; border:1px solid #e5e7eb; border-radius:6px;">
-    <a href="Ud2_Contenedores.md" style="display:block; padding:.45rem .65rem; text-decoration:none;">2 – Contenedores</a>
+    <a href="Ud2 Contenedores/" style="display:block; padding:.45rem .65rem; text-decoration:none;">2 – Contenedores</a>
   </li>
   <li style="background:#f8fafc; border:1px solid #e5e7eb; border-radius:6px;">
-    <a href="Ud3_ArquitecturaWeb.md" style="display:block; padding:.45rem .65rem; text-decoration:none;">3 – Arquitectura web – Servidores web</a>
+    <a href="Ud3 ArquitecturaWeb/" style="display:block; padding:.45rem .65rem; text-decoration:none;">3 – Arquitectura web – Servidores web</a>
   </li>
   <li style="background:#f8fafc; border:1px solid #e5e7eb; border-radius:6px;">
-    <a href="Ud4_ServiciosRed1.md" style="display:block; padding:.45rem .65rem; text-decoration:none;">4 – Servicios de red (DNS y LDAP)</a>
+    <a href="Ud6_ServidoresAplicaciones.md" style="display:block; padding:.45rem .65rem; text-decoration:none;">4 – Servidores de aplicaciones</a>
   </li>
   <li style="background:#f8fafc; border:1px solid #e5e7eb; border-radius:6px;">
-    <a href="Ud5_ServiciosRed2.md" style="display:block; padding:.45rem .65rem; text-decoration:none;">5 – Servicios de red (FTP)</a>
+    <a href="Ud7_CICD.md" style="display:block; padding:.45rem .65rem; text-decoration:none;">5 – CI/CD</a>
   </li>
   <li style="background:#f8fafc; border:1px solid #e5e7eb; border-radius:6px;">
-    <a href="Ud6_ServidoresAplicaciones.md" style="display:block; padding:.45rem .65rem; text-decoration:none;">6 – Servidores de aplicaciones</a>
+    <a href="Ud4_ServiciosRed1.md" style="display:block; padding:.45rem .65rem; text-decoration:none;">6 – Servicios de red (DNS y LDAP)</a>
   </li>
   <li style="background:#f8fafc; border:1px solid #e5e7eb; border-radius:6px;">
-    <a href="Ud7_CICD.md" style="display:block; padding:.45rem .65rem; text-decoration:none;">7 – CI/CD</a>
+    <a href="Ud5_ServiciosRed2.md" style="display:block; padding:.45rem .65rem; text-decoration:none;">7 – Servicios de red (FTP)</a>
   </li>
 </ul>
 
