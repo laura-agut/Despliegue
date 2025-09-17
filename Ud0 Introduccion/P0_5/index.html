@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://laura-agut.github.io/Despliegue/Ud0%20Introduccion/P0_4/">
+        <link rel="canonical" href="https://laura-agut.github.io/Despliegue/Ud0%20Introduccion/P0_5/">
       
       
-        <link rel="prev" href="../P0_3/">
+        <link rel="prev" href="../P0_4/">
       
-      
-        <link rel="next" href="../P0_5/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>P0.4. Comandos básicos Linux - Despliegue de aplicaciones web</title>
+        <title>P0.5: Despliegue Java en AWS Elastic Beanstalk - Despliegue de aplicaciones web</title>
       
     
     
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#comandos-basicos-linux" class="md-skip">
+        <a href="#mi-primer-despliegue-en-aws-elastic-beanstalk" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -112,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              P0.4. Comandos básicos Linux
+              P0.5: Despliegue Java en AWS Elastic Beanstalk
             
           </span>
         </div>
@@ -473,6 +471,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../P0_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    P0.4. Comandos básicos Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -490,7 +511,7 @@
   
   
   <span class="md-ellipsis">
-    P0.4. Comandos básicos Linux
+    P0.5: Despliegue Java en AWS Elastic Beanstalk
     
   </span>
   
@@ -503,7 +524,7 @@
   
   
   <span class="md-ellipsis">
-    P0.4. Comandos básicos Linux
+    P0.5: Despliegue Java en AWS Elastic Beanstalk
     
   </span>
   
@@ -526,56 +547,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivos" class="md-nav__link">
+  <a href="#objetivo" class="md-nav__link">
     <span class="md-ellipsis">
-      Objetivos.
+      Objetivo
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#actualizacion-de-paquetes-con-apt" class="md-nav__link">
+  <a href="#requisitos" class="md-nav__link">
     <span class="md-ellipsis">
-      Actualización de paquetes con APT.
+      Requisitos
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-y-manipulacion-de-archivos-y-directorios" class="md-nav__link">
+  <a href="#paso-a-paso" class="md-nav__link">
     <span class="md-ellipsis">
-      Creación y manipulación de archivos y directorios.
+      Paso a paso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso a paso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-acceso-al-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Acceso al servicio
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#manipulacion-de-permisos" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-crear-la-aplicacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Manipulación de permisos.
+      2) Crear la aplicación
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#gestion-de-usuarios-y-grupos" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#3-probar-la-aplicacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Gestión de usuarios y grupos.
+      3) Probar la aplicación
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#gestion-de-procesos-basicos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gestión de procesos básicos.
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -583,29 +610,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../P0_5/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    P0.5: Despliegue Java en AWS Elastic Beanstalk
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -642,136 +646,154 @@
 
 
 
-<h1 id="comandos-basicos-linux">Comandos básicos Linux</h1>
-<h2 id="objetivos">Objetivos.</h2>
+<h1 id="mi-primer-despliegue-en-aws-elastic-beanstalk"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 20H6.5q-2.28 0-3.89-1.57Q1 16.85 1 14.58q0-1.95 1.17-3.48 1.18-1.53 3.08-1.95.63-2.3 2.5-3.72Q9.63 4 12 4q2.93 0 4.96 2.04Q19 8.07 19 11q1.73.2 2.86 1.5 1.14 1.28 1.14 3 0 1.88-1.31 3.19T18.5 20H13v-7.15l1.6 1.55L16 13l-4-4-4 4 1.4 1.4 1.6-1.55Z"/></svg></span> Mi primer despliegue en AWS Elastic Beanstalk</h1>
+<p>En esta práctica aprenderás a publicar una aplicación Java sencilla en <strong>Elastic Beanstalk (EB)</strong> usando la <strong>consola web de AWS</strong>.<br />
+Al final tendrás una <strong>URL pública</strong> con tu app en la nube. 🚀</p>
+<hr />
+<h2 id="objetivo"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.4 6H20v10h-7l-.4-2H7v7H5V4h9zm-.4 8h2v-2h2v-2h-2V8h-2v2l-1-2V6h-2v2H9V6H7v2h2v2H7v2h2v-2h2v2h2v-2l1 2zm-3-4V8h2v2zm3 0h2v2h-2z"/></svg></span> Objetivo</h2>
+<p>Desplegar una API <strong>Hello</strong> de Spring Boot sobre EB (plataforma <strong>Java / Corretto 21</strong>) y entender el ciclo:</p>
+<p>➡️ <strong>Subir → Desplegar → Probar → Limpiar</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Duración estimada</p>
+<p>⏱️ 25–35 minutos (la primera vez).</p>
+</div>
+<hr />
+<h2 id="requisitos"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 5h6v6H3zm2 2v2h2V7zm6 0h10v2H11zm0 8h10v2H11zm-6 5-3.5-3.5 1.41-1.41L5 17.17l4.59-4.58L11 14z"/></svg></span> Requisitos</h2>
+<ul>
+<li>Archivo <strong><code>java-eb-demo.zip</code></strong>:.  </li>
+<li><em>(Opcional)</em> Maven y Java 21 si quieres recompilar.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">¿Qué hay dentro del ZIP?</p>
+<ul>
+<li>Un <strong><code>.jar</code></strong> ejecutable de Spring Boot.  </li>
+<li>Un <strong><code>Procfile</code></strong> que indica a EB cómo arrancar la app.  </li>
+</ul>
+</div>
+<hr />
+<h2 id="paso-a-paso"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 16.5v-9l6 4.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg></span> Paso a paso</h2>
+<h3 id="1-acceso-al-servicio"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.11 0-2 .89-2 2v4h2V5h14v14H5v-4H3v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-8.92 12.58L11.5 17l5-5-5-5-1.42 1.41L12.67 11H3v2h9.67z"/></svg></span> 1) Acceso al servicio</h3>
 <ol>
-<li>Actualizar paquetes del sistema con APT.</li>
-<li>Recordar cómo crear, mover y eliminar archivos y directorios.</li>
-<li>Entender y gestionar los permisos de archivos y directorios.</li>
-<li>Trabajar con usuarios y grupos.</li>
-<li>Introducir la gestión de procesos básicos.</li>
+<li>Entra en la consola: <a href="https://www.awsacademy.com/login">https://www.awsacademy.com/login</a>  </li>
+<li>Busca <strong>Elastic Beanstalk</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg></span>.
+<img alt="AWS Elastic Beanstalk" src="beanstalk.png" /></li>
 </ol>
-<p>La mayoría de los servicios que vamos a desplegar se harán sobre máquinas linux. Por tanto, es importante dominar los comandos básicos de administración de un sistema linux. Ya has estudiado esto el curso pasado, pero no está de más recordarlo.</p>
-<p>Te aconsejo que a partir de esta práctica te hagas un "cheatsheet" con todos los comandos que utilices y lo vayas ampliando durante el curso.</p>
-<p>Como ya has aprendido a crear una EC2 en AWS, empezaremos creando una EC2 básica Debian como la de la primera práctica. Conéctate a ella por ssh y realiza las siguientes operaciones. Apunta el comando o comandos que usas para cada operación.</p>
-<h2 id="actualizacion-de-paquetes-con-apt">Actualización de paquetes con APT.</h2>
-<p>Esto será lo primero que hagamos en cada práctica, así que apréndelo bien.</p>
+<hr />
+<h3 id="2-crear-la-aplicacion"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 2H3c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 5H3V4h18z"/></svg></span> 2) Crear la aplicación</h3>
+<ol>
+<li>Haz clic en <strong>Create application</strong>.  </li>
+<li>Completa los datos:  </li>
+<li><strong>Application name</strong> → <code>demo-java</code><br />
+<img alt="NombreAplicacion" src="form1.png" /></li>
+<li><strong>Plataforma</strong> → <strong>Java</strong> → <em>Corretto 17 running on 64bit Amazon Linux 2</em>  </li>
+<li><strong>Código de la aplicación</strong> → <strong>Cargar el código</strong> → selecciona <code>java-eb-demo.zip</code><br />
+<img alt="SubirArchivo" src="form2.png" /></li>
+<li><strong>Políticas</strong>  → selecciona las que hay por defecto
+        <img alt="SubirArchivo" src="form3.png" /></li>
+<li>El resto de pantallas son opcionales. Pulsa siguiente hasta llegar a la final.</li>
+<li>Pulsa en <strong>Create environment</strong> (tipo <strong>Web server</strong>).</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Tiempo de espera</p>
+<p>EB creará automáticamente:<br />
+- una instancia <strong>EC2</strong><br />
+- un balanceador de carga<br />
+- grupos de seguridad y S3<br />
+<br>⏳ Aproximadamente 2–3 minutos.<br />
+<br>Continúa cuando veas <strong>Health: OK</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z"/></svg></span>.</p>
+</div>
+<hr />
+<h3 id="3-probar-la-aplicacion"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg></span> 3) Probar la aplicación</h3>
+<p>Cuando el entorno esté listo:<br />
+- Haz clic en la <strong>URL pública</strong> que aparece arriba.<br />
+- Verás el mensaje:  </p>
+<p>Hola Mundo!</p>
+<details class="note">
+<summary>🧪 Ejercicio final: modifica, prueba en local y despliega en Elastic Beanstalk</summary>
+<h1 id="objetivo_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.4 6H20v10h-7l-.4-2H7v7H5V4h9zm-.4 8h2v-2h2v-2h-2V8h-2v2l-1-2V6h-2v2H9V6H7v2h2v2H7v2h2v-2h2v2h2v-2l1 2zm-3-4V8h2v2zm3 0h2v2h-2z"/></svg></span> Objetivo</h1>
+<p>Cambiar el texto de la app a <strong>“Hola, <tu nombre>”</strong>, <strong>compilar</strong> y <strong>probar en local</strong>, y finalmente <strong>empaquetar</strong> para <strong>subir a Elastic Beanstalk (EB)</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">¿Qué material necesitas?</p>
 <ul>
-<li>
-<p>Actualiza la lista de paquetes disponibles.</p>
-</li>
-<li>
-<p>Realiza una actualización completa del sistema, instalando los paquetes nuevos o actualizados.</p>
-</li>
-<li>
-<p>Limpia paquetes que ya no son necesarios.</p>
-</li>
+<li><strong>Opción A (recomendada):</strong> el <strong>proyecto completo</strong> (código fuente + <code>pom.xml</code>).<br />
+  → Podrás <strong>modificar</strong>, <strong>compilar</strong> y <strong>crear tu propio ZIP</strong> para EB.  </li>
+<li><strong>Opción B (limitada):</strong> solo un <strong>ZIP precompilado</strong> con <code>Procfile</code> + <code>target/</code>.<br />
+  → <strong>No</strong> podrás cambiar el mensaje (no hay código fuente). Pide el proyecto completo.</li>
 </ul>
-<h2 id="creacion-y-manipulacion-de-archivos-y-directorios">Creación y manipulación de archivos y directorios.</h2>
+</div>
+<hr />
+<h2 id="a-si-tienes-el-proyecto-completo"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m6.75 11.5c2.75 0 3.49-2.03 3.68-3.1.91-.29 1.57-1.14 1.57-2.15C18 7 17 6 15.75 6S13.5 7 13.5 8.25c0 .94.57 1.75 1.39 2.08C14.67 11 14 12 12 12c-1.38 0-2.34.35-3 .84V8.87c.87-.31 1.5-1.14 1.5-2.12 0-1.25-1-2.25-2.25-2.25S6 5.5 6 6.75c0 .98.63 1.81 1.5 2.12v6.26c-.87.31-1.5 1.14-1.5 2.12 0 1.25 1 2.25 2.25 2.25s2.25-1 2.25-2.25c0-.93-.56-1.75-1.37-2.07.28-.68 1.1-1.68 3.62-1.68m-4.5 3a.75.75 0 0 1 .75.75.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75m0-10.5a.75.75 0 0 1 .75.75.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75m7.5 1.5a.75.75 0 0 1 .75.75.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75"/></svg></span> A) Si tienes el <strong>proyecto completo</strong></h2>
+<h3 id="1-cambia-el-mensaje">1) Cambia el mensaje</h3>
+<p>Edita la clase, por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">helloWorld</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Hola, Laura!&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="2-compila-y-prueba-en-local">2) Compila y prueba en local</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mvn<span class="w"> </span>clean<span class="w"> </span>package
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>java<span class="w"> </span>-jar<span class="w"> </span>target/eb-java-demo-0.0.1-SNAPSHOT.jar
+</code></pre></div>
+<p>Abre <a href="http://localhost:8080">http://localhost:8080</a> → debería mostrar <strong>Hola, <tu nombre></strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">¿No sabes el nombre exacto del JAR?</p>
+<p>Mira qué JAR creó Maven:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ls<span class="w"> </span>target/*.jar
+</code></pre></div>
+Si es distinto, úsalo en <code>java -jar ...</code>.</p>
+</div>
+<h3 id="3-empaqueta-para-elastic-beanstalk">3) Empaqueta para Elastic Beanstalk</h3>
+<p>Crea un ZIP con <strong>exactamente</strong>:
+- <code>Procfile</code> (en la <strong>raíz</strong> del ZIP)
+- la carpeta <code>target/</code> con tu <code>.jar</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>zip<span class="w"> </span>-r<span class="w"> </span>java-eb-demo.zip<span class="w"> </span>Procfile<span class="w"> </span>target/
+</code></pre></div>
+<p><strong>Procfile</strong> (en la <strong>raíz del proyecto</strong>):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>web: java -Dserver.port=$PORT -jar target/eb-java-demo-0.0.1-SNAPSHOT.jar
+</code></pre></div>
+<blockquote>
+<p>Si el nombre del jar cambia, actualiza esa línea, o usa esta variante robusta:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>web: bash -lc &#39;java -Dserver.port=$PORT -jar $(ls target/*.jar | head -n1)&#39;
+</code></pre></div>
+<h3 id="4-sube-a-elastic-beanstalk">4) Sube a Elastic Beanstalk</h3>
+<ol>
+<li>AWS Console → <strong>Elastic Beanstalk</strong> → tu <strong>entorno</strong> → <strong>Upload and deploy</strong>.  </li>
+<li>Sube <code>java-eb-demo.zip</code>.  </li>
+<li>Espera <strong>Health: OK</strong> → abre la <strong>URL pública</strong> → verás tu mensaje.</li>
+</ol>
+<hr />
+<h2 id="b-si-solo-tienes-un-zip-precompilado"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m5.12 5 .81-1h12l.94 1M12 17.5 6.5 12H10v-2h4v2h3.5zm8.54-12.27-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6 3 6.5V19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.5c0-.5-.17-.93-.46-1.27"/></svg></span> B) Si solo tienes un <strong>ZIP precompilado</strong></h2>
+<p>Con un ZIP que contiene <strong><code>Procfile</code> + <code>target/</code></strong> <strong>no</strong> puedes cambiar el texto: faltarían los fuentes.<br />
+Pide el <strong>proyecto completo</strong> o descarga uno de ejemplo, edítalo y sigue los pasos del apartado A.</p>
+<hr />
+<h2 id="checklist-rapido"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 10H3v2h11zm0-4H3v2h11zM3 16h7v-2H3zm18.5-4.5L23 13l-7 7-4.5-4.5L13 14l3 3z"/></svg></span> Checklist rápido</h2>
 <ul>
-<li>
-<p>Ve a la carpeta personal del usuario activo.</p>
-</li>
-<li>
-<p>En la carpeta personal del usuario en uso crear un directorio llamado <code>practica01</code>.</p>
-</li>
-<li>
-<p>Entra en el directorio <code>practica01</code>.</p>
-</li>
-<li>
-<p>Muestra el directorio en el que te encuentras.</p>
-</li>
-<li>
-<p>Muestra el contenido de la carpeta</p>
-</li>
-<li>
-<p>Dentro de este directorio, crea tres archivos vacíos llamados: <code>archivo.txt</code>, <code>archivo2.txt</code>, <code>archivo3.txt</code>.</p>
-</li>
-<li>
-<p>Cambia el nombre de <code>archivo.txt</code> a <code>archivo1.txt</code></p>
-</li>
-<li>
-<p>Muestra el contenido del directorio actual en modo "largo" (ver permisos, propietario, grupo y fecha creación)</p>
-</li>
-<li>
-<p>Crear un subdirectorio llamado <code>subdirectorio</code> dentro de <code>practica01</code>.</p>
-</li>
+<li>[ ] Modifiqué el texto en el código fuente.  </li>
+<li>[ ] Compilé: <code>mvn clean package</code> sin errores.  </li>
+<li>[ ] Probé local: <code>java -jar target/&lt;mi-jar&gt;.jar</code> → “Hola, <mi nombre>”.  </li>
+<li>[ ] Creé <code>java-eb-demo.zip</code> con <strong>Procfile</strong> + <strong>target/</strong>.  </li>
+<li>[ ] Desplegué en EB y vi <strong>Health: OK</strong>.  </li>
 </ul>
-<h2 id="manipulacion-de-permisos">Manipulación de permisos.</h2>
+<hr />
+<h2 id="problemas-tipicos-y-solucion"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.79 15.41c.95-2.17.95-4.66 0-6.82l-2.74 1.24c.6 1.38.6 2.95.01 4.34zm-4.37-11.2a8.54 8.54 0 0 0-6.83 0l1.24 2.73c1.39-.59 2.96-.59 4.35.01zM4.21 8.58a8.56 8.56 0 0 0 0 6.84l2.74-1.25c-.6-1.38-.6-2.96 0-4.35zm4.38 11.21a8.5 8.5 0 0 0 6.83-.01l-1.24-2.73a5.5 5.5 0 0 1-4.34.01zM12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 6a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4"/></svg></span> Problemas típicos y solución</h2>
+<details class="question">
+<summary>EB falla con 502 / Health rojo</summary>
 <ul>
-<li>
-<p>Mostrar los permisos actuales de los archivos.</p>
-</li>
-<li>
-<p>Cambiar los permisos del archivo <code>archivo1.txt</code> para que solo el propietario tenga permisos de lectura y escritura.</p>
-</li>
-<li>
-<p>Cambia los permisos del archivo <code>archivo2.txt</code> para que todos los usuarios tengan acceso de lectura, pero solo el propietario puede escribir. Comprueba los permisos.</p>
-</li>
-<li>
-<p>Cambia los permisos del directorio <code>subdirectorio</code> para que solo el propietario pueda leer, escribir y acceder a él.</p>
-</li>
+<li>Asegúrate de que el <strong><code>Procfile</code></strong> está en la <strong>raíz del ZIP</strong>.  </li>
+<li>Confirma que el nombre del <code>.jar</code> del <code>Procfile</code> coincide con el real.  </li>
+<li>Usa la variante <code>bash -lc '... *.jar'</code> si el nombre cambia.  </li>
+<li>Revisa logs en EB → <strong>Logs → Request logs → Last 100 lines</strong>.</li>
 </ul>
-<h2 id="gestion-de-usuarios-y-grupos">Gestión de usuarios y grupos.</h2>
+</details>
+<details class="question">
+<summary>No arranca en local</summary>
 <ul>
-<li>
-<p>Crea un nuevo usuario llamado <code>usuario1</code> con contraseña <code>ieselcaminas</code>.</p>
-</li>
-<li>
-<p>Comprueba que el usuario se ha creado correctamente. Y comprueba también si se ha creado un grupo con el mismo nombre que ese usuario.</p>
-</li>
-<li>
-<p>Asigna al usuario <code>usuario1</code> la propiedad del directorio <code>practica01</code>.</p>
-</li>
-<li>
-<p>Crear un grupo llamado <code>grupo1</code> y añadir a <code>usuario1</code>. Comprueba que se ha añadido.</p>
-</li>
-<li>
-<p>Cambiar la propiedad de <code>archivo3.txt</code> a grupo1. Compruébalo.</p>
-</li>
-<li>
-<p>Quita el usuario1 de grupo1 y compruébalo.</p>
-</li>
-<li>
-<p>Elimina el grupo1</p>
-</li>
-<li>
-<p>Elimina usuario1 y su directorio home</p>
-</li>
+<li>Comprueba la versión de Java (<code>java -version</code>) y que el JAR existe (<code>ls target/*.jar</code>).  </li>
+<li>Vuelve a compilar con <code>mvn clean package</code> y mira errores de compilación.</li>
 </ul>
-<h2 id="gestion-de-procesos-basicos">Gestión de procesos básicos.</h2>
-<ul>
-<li>
-<p>Ver los procesos en ejecución del usuario actual en formato extendido, con todos los datos.</p>
-</li>
-<li>
-<p>Lanza un proceso "yes" en 2º plano con <code>yes &gt; /dev/null &amp;</code>. Identifica su PID.</p>
-</li>
-<li>
-<p>Vuelve a obtener los procesos en ejecución del usuario. ¿Ves el proceso "yes" que acabas de lanzar?</p>
-</li>
-<li>
-<p>Obtén los trabajos en segundo plano.</p>
-</li>
-<li>
-<p>Trae el proceso al primer plano</p>
-</li>
-<li>
-<p>Ahora ya no podrás interactuar con la terminal porque el proceso "yes" es infinito y la está utilizando sin devolver el prompt. Córtalo.</p>
-</li>
-<li>
-<p>Vuelve a lanzar yes pero ahora en primer plano. Obtendrás la lista infinita de "y" sin recuperar el prompt. Abre otro terminal y obtén la lista de todos los procesos en el sistema. Identifica el "yes" que está corriendo en el primer terminal.</p>
-</li>
-<li>
-<p>Detén el proceso por su ID sin esperar.</p>
-</li>
-<li>
-<p>Comprueba que recuperas el prompt en el primer terminal.</p>
-</li>
-<li>
-<p>Vuelve a obtener todos los procesos del sistema y comprueba que ya no existe.</p>
-</li>
-</ul>
+</details>
+</details>
 
 
 
