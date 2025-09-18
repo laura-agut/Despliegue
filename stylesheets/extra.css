@@ -1,0 +1,72 @@
+img[alt$=">"] {
+  float: right;
+}
+
+img[alt$="<"] {
+  float: left;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  float: none !important;
+}
+
+:root {
+  --md-primary-fg-color: #60102f;
+  --md-primary-fg-color--light: rgb(123, 136, 204);
+  --md-primary-fg-color--dark: #34091a;
+}
+
+/* Enlaces */
+a { color: #2563eb; }
+a:hover { text-decoration: underline; }
+
+/* Imágenes centradas y responsivas */
+img { display: block; margin: 1rem auto; max-width: 100%; }
+
+/* Admonitions más suaves */
+.md-typeset .admonition {
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+/* Listas más compactas */
+.md-typeset ul { margin: .4em 0 .8em 0; }
+
+/* 📑 Navegación lateral y superior moderna */
+
+/* Links de navegación: gris oscuro, limpios */
+.md-nav__link {
+  color: #1f2937 !important;   /* gris muy oscuro */
+  font-weight: 500;            /* semi-negrita */
+  border-radius: 6px;          /* esquinas suaves */
+  padding: 0.4rem 0.6rem;      /* más respiración */
+  transition: all 0.2s ease;
+}
+
+/* Hover: azul moderno con fondo sutil */
+.md-nav__link:hover {
+  color: #2563eb !important;   /* azul brillante */
+  background: #eff6ff;         /* azul muy suave de fondo */
+  text-decoration: none;
+}
+
+/* Link activo: más marcado */
+.md-nav__link--active {
+  color: #2563eb !important;
+  background: #dbeafe;         /* fondo azul claro */
+  font-weight: 600;            /* un poco más fuerte */
+  border-left: 3px solid #2563eb; /* marca lateral */
+  padding-left: calc(0.6rem - 3px); /* ajusta padding */
+}
+
+/* Subitems (más discretos) */
+.md-nav__item .md-nav__link {
+  font-size: 0.95em;
+  font-weight: 400;
+}
+
+
