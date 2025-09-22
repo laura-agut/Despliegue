@@ -533,46 +533,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requisitos" class="md-nav__link">
+  <a href="#1-crear-el-proyecto-en-startspringio" class="md-nav__link">
     <span class="md-ellipsis">
-      Requisitos
+      1) Crear el proyecto en Start.Spring.io
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-a-paso" class="md-nav__link">
+  <a href="#2-descomprimir-y-abrir" class="md-nav__link">
     <span class="md-ellipsis">
-      Paso a paso
+      2) Descomprimir y abrir
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Paso a paso">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-anadir-clases-servletinitializer-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Añadir clases (ServletInitializer + Controller)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3) Añadir clases (ServletInitializer + Controller)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-acceso-al-servicio" class="md-nav__link">
+  <a href="#31-servletinitializer-necesario-para-war-en-tomcat" class="md-nav__link">
     <span class="md-ellipsis">
-      1) Acceso al servicio
+      3.1 ServletInitializer (necesario para WAR en Tomcat)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-crear-la-aplicacion" class="md-nav__link">
+  <a href="#32-hellocontroller" class="md-nav__link">
     <span class="md-ellipsis">
-      2) Crear la aplicación
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-probar-la-aplicacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      3) Probar la aplicación
+      3.2 HelloController
     </span>
   </a>
   
@@ -580,6 +580,69 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-probar-en-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Probar en local
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-empaquetar-el-war" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Empaquetar el .war
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-desplegar-en-aws-elastic-beanstalk-tomcat" class="md-nav__link">
+    <span class="md-ellipsis">
+      6) Desplegar en AWS Elastic Beanstalk (Tomcat)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-cambiar-el-mensaje-y-volver-a-desplegar" class="md-nav__link">
+    <span class="md-ellipsis">
+      7) Cambiar el mensaje y volver a desplegar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-solucion-de-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      8) Solución de problemas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-limpieza-evitar-costes" class="md-nav__link">
+    <span class="md-ellipsis">
+      9) Limpieza (evitar costes)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checklist final
+    </span>
+  </a>
   
 </li>
       
@@ -628,149 +691,163 @@
 Al final tendrás una <strong>URL pública</strong> con tu app en la nube. 🚀</p>
 <hr />
 <h2 id="objetivo"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.4 6H20v10h-7l-.4-2H7v7H5V4h9zm-.4 8h2v-2h2v-2h-2V8h-2v2l-1-2V6h-2v2H9V6H7v2h2v2H7v2h2v-2h2v2h2v-2l1 2zm-3-4V8h2v2zm3 0h2v2h-2z"/></svg></span> Objetivo</h2>
-<p>Desplegar una API <strong>Hello</strong> de Spring Boot sobre EB (plataforma <strong>Java / Corretto 21</strong>) y entender el ciclo:</p>
-<p>➡️ <strong>Subir → Desplegar → Probar → Limpiar</strong></p>
+<ul>
+<li>Generar un proyecto <strong>Spring Boot WAR</strong>.</li>
+<li>Verlo <strong>en local</strong>.</li>
+<li>Empaquetar el <strong><code>.war</code></strong> y <strong>subirlo a Elastic Beanstalk (Tomcat)</strong>.</li>
+<li>Abrir la <strong>URL pública</strong> y comprobar el <em>Hola Mundo</em>.</li>
+</ul>
 <div class="admonition info">
-<p class="admonition-title">Duración estimada</p>
-<p>⏱️ 25–35 minutos (la primera vez).</p>
-</div>
-<hr />
-<h2 id="requisitos"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 5h6v6H3zm2 2v2h2V7zm6 0h10v2H11zm0 8h10v2H11zm-6 5-3.5-3.5 1.41-1.41L5 17.17l4.59-4.58L11 14z"/></svg></span> Requisitos</h2>
+<p class="admonition-title">Requisitos</p>
 <ul>
-<li>Archivo <strong><code>java-eb-demo.zip</code></strong>:.  </li>
-<li><em>(Opcional)</em> Maven y Java 21 si quieres recompilar.</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">¿Qué hay dentro del ZIP?</p>
-<ul>
-<li>Un <strong><code>.jar</code></strong> ejecutable de Spring Boot.  </li>
-<li>Un <strong><code>Procfile</code></strong> que indica a EB cómo arrancar la app.  </li>
+<li>Cuenta de AWS (Educate/Academy/Free Tier).</li>
+<li>Java 17 y Maven (o wrapper <code>./mvnw</code> del proyecto).</li>
+<li>Navegador web y acceso a la <strong>Consola de AWS</strong>.</li>
 </ul>
 </div>
 <hr />
-<h2 id="paso-a-paso"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 16.5v-9l6 4.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg></span> Paso a paso</h2>
-<h3 id="1-acceso-al-servicio"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.11 0-2 .89-2 2v4h2V5h14v14H5v-4H3v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-8.92 12.58L11.5 17l5-5-5-5-1.42 1.41L12.67 11H3v2h9.67z"/></svg></span> 1) Acceso al servicio</h3>
+<h2 id="1-crear-el-proyecto-en-startspringio"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg></span> 1) Crear el proyecto en Start.Spring.io</h2>
 <ol>
-<li>Entra en la consola: <a href="https://www.awsacademy.com/login">https://www.awsacademy.com/login</a>  </li>
-<li>Busca <strong>Elastic Beanstalk</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg></span>.
+<li>Abre <a href="https://start.spring.io">https://start.spring.io</a>  </li>
+<li>Selecciona:</li>
+<li><strong>Project:</strong> Maven</li>
+<li><strong>Language:</strong> Java</li>
+<li><strong>Spring Boot:</strong> 3.x</li>
+<li><strong>Packaging:</strong> <strong>War</strong></li>
+<li><strong>Java:</strong> <strong>17</strong></li>
+<li><strong>Group:</strong> <code>com.example</code></li>
+<li><strong>Artifact:</strong> <code>hola-war</code></li>
+<li><strong>Name:</strong> <code>hola-war</code></li>
+<li><strong>Package name:</strong> <code>com.example.holawar</code></li>
+<li><strong>Dependencies:</strong> <code>Spring Web</code></li>
+<li>Pulsa <strong>Generate</strong> → se descargará <code>hola-war.zip</code>.</li>
+</ol>
+<hr />
+<h2 id="2-descomprimir-y-abrir"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 2) Descomprimir y abrir</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>unzip<span class="w"> </span>hola-war.zip
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>hola-war
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>code<span class="w"> </span>.<span class="w">    </span><span class="c1"># opcional: abre en VS Code</span>
+</code></pre></div>
+<p>Estructura inicial (resumen):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>hola-war/
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a> ├─ pom.xml
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a> └─ src/main/java/com/example/holawar/HolaWarApplication.java
+</code></pre></div></p>
+<hr />
+<h2 id="3-anadir-clases-servletinitializer-controller"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.11 0-2 .89-2 2v16c0 1.11.89 2 2 2h7.81c-.53-.91-.81-1.95-.81-3 0-3.31 2.69-6 6-6 .34 0 .67.03 1 .08V8zm-1 7V3.5L18.5 9zm10 11h-3v3h-2v-3h-3v-2h3v-3h2v3h3z"/></svg></span> 3) Añadir clases (ServletInitializer + Controller)</h2>
+<h3 id="31-servletinitializer-necesario-para-war-en-tomcat">3.1 <code>ServletInitializer</code> (necesario para WAR en Tomcat)</h3>
+<p>Crea el archivo <strong><code>src/main/java/com/example/holawar/ServletInitializer.java</code></strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.holawar</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.boot.builder.SpringApplicationBuilder</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.boot.web.servlet.support.SpringBootServletInitializer</span><span class="p">;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ServletInitializer</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">SpringBootServletInitializer</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="nd">@Override</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="kd">protected</span><span class="w"> </span><span class="n">SpringApplicationBuilder</span><span class="w"> </span><span class="nf">configure</span><span class="p">(</span><span class="n">SpringApplicationBuilder</span><span class="w"> </span><span class="n">application</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">application</span><span class="p">.</span><span class="na">sources</span><span class="p">(</span><span class="n">HolaWarApplication</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="32-hellocontroller">3.2 <code>HelloController</code></h3>
+<p>Crea <strong><code>src/main/java/com/example/holawar/HelloController.java</code></strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.holawar</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.GetMapping</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.RestController</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nd">@RestController</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloController</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">hello</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Hola mundo desde WAR en Tomcat (Elastic Beanstalk)!&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="4-probar-en-local"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6h16v10H4m16 2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2H0v2h24v-2z"/></svg></span> 4) Probar en local</h2>
+<p>Usa el <em>wrapper</em> o Maven instalado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./mvnw<span class="w"> </span>spring-boot:run<span class="w">      </span><span class="c1"># macOS/Linux</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># o</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>mvn<span class="w"> </span>spring-boot:run<span class="w">         </span><span class="c1"># si tienes Maven instalado</span>
+</code></pre></div>
+<p>Abre <a href="http://localhost:8080">http://localhost:8080</a> → debería verse el texto.</p>
+<div class="admonition tip">
+<p class="admonition-title">¿Por qué <code>spring-boot:run</code>?</p>
+<p>Al empaquetar como <strong>WAR</strong> con Tomcat en <em>scope <code>provided</code></em>, ejecutar <code>java -jar target/*.war</code> no siempre funciona. Para pruebas locales, usa <code>spring-boot:run</code>.</p>
+</div>
+<hr />
+<h2 id="5-empaquetar-el-war"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 10.96a.985.985 0 0 1-.37-1.37L3.13 7c.11-.2.28-.34.47-.42l7.83-4.4c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.19.1.35.26.44.46l1.45 2.52c.28.48.11 1.09-.36 1.36l-1 .58v4.96c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-5.54c-.3.17-.68.18-1 0m10-6.81v6.7l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-3.22l-5 2.9c-.33.18-.7.17-1 .01v3.69zm-5.15-2.55 6.28-3.63-.58-1.01-6.28 3.63z"/></svg></span> 5) Empaquetar el <code>.war</code></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./mvnw<span class="w"> </span>clean<span class="w"> </span>package<span class="w">   </span><span class="c1"># o: mvn clean package</span>
+</code></pre></div>
+<p>Se genera en:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>target/hola-war-0.0.1-SNAPSHOT.war
+</code></pre></div>
+<hr />
+<h2 id="6-desplegar-en-aws-elastic-beanstalk-tomcat"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.64 10.38c0 .25.02.45.07.62.05.12.12.28.21.46.04.04.05.1.05.15 0 .07-.04.13-.13.2l-.42.28c-.06.04-.12.06-.17.06-.07 0-.13-.04-.2-.1-.09-.1-.17-.2-.24-.31-.06-.11-.13-.24-.2-.39-.52.61-1.17.92-1.96.92-.56 0-1-.16-1.33-.48-.32-.32-.49-.75-.49-1.29 0-.55.2-1 .6-1.36.41-.34.95-.52 1.63-.52.23 0 .44.02.71.06.23.03.5.08.76.14v-.48c0-.51-.1-.84-.31-1.07-.22-.21-.57-.3-1.08-.3-.24 0-.48.03-.72.08-.25.06-.49.13-.72.23-.11.04-.2.07-.23.08-.05.02-.08.02-.11.02-.09 0-.14-.06-.14-.2v-.33c0-.1.01-.18.05-.23q.045-.075.18-.12c.24-.14.51-.24.84-.32a4 4 0 0 1 1.04-.13q1.185 0 1.74.54c.37.36.55.91.55 1.64v2.15zm-2.7 1.02c.22 0 .44-.04.68-.12s.45-.23.63-.43c.11-.13.19-.27.25-.43 0-.16.05-.35.05-.58v-.27c-.2-.07-.4-.07-.62-.12a7 7 0 0 0-.62-.04c-.45 0-.77.09-.99.27s-.32.43-.32.76c0 .32.07.56.24.71.16.17.39.25.7.25m5.34.71a.6.6 0 0 1-.28-.06c-.03-.05-.08-.14-.12-.26L8.32 6.65c-.04-.15-.06-.22-.06-.27 0-.11.05-.17.16-.17h.65c.13 0 .22.02.26.07.06.04.1.13.14.26l1.11 4.4 1.04-4.4c.03-.13.07-.22.13-.26.05-.04.14-.07.25-.07h.55c.12 0 .21.02.26.07.05.04.1.13.13.26L14 11l1.14-4.46c.04-.13.09-.22.13-.26.06-.04.14-.07.26-.07h.62c.11 0 .17.06.17.17 0 .03-.01.07-.02.12 0 0-.02.08-.04.15l-1.61 5.14c-.04.14-.08.21-.15.26-.04.04-.13.07-.24.07h-.57c-.13 0-.19-.02-.27-.07a.45.45 0 0 1-.12-.26L12.27 7.5l-1.03 4.28q-.045.195-.12.27a.5.5 0 0 1-.27.06zm8.55.18c-.33 0-.7-.04-1.03-.12s-.59-.17-.76-.26a.5.5 0 0 1-.21-.19.4.4 0 0 1-.04-.18v-.34c0-.14.05-.2.15-.2h.12c.04 0 .1.05.17.08.22.1.47.18.73.23.27.05.54.08.79.08.42 0 .75-.07.97-.22.23-.17.35-.36.35-.63 0-.19-.07-.34-.18-.47-.12-.12-.35-.24-.67-.34l-.97-.3c-.48-.16-.84-.38-1.06-.68a1.58 1.58 0 0 1-.33-.97c0-.28.06-.52.18-.73.12-.22.28-.4.46-.55.22-.15.44-.26.71-.34q.39-.12.84-.12.21 0 .45.03c.14.02.28.05.42.07.14.04.26.07.38.11s.2.08.28.12c.09.05.16.1.2.16s.06.13.06.22v.32q0 .21-.15.21c-.05 0-.14-.03-.26-.08-.37-.17-.8-.26-1.27-.26-.38 0-.66.06-.89.19-.2.12-.31.32-.31.59 0 .19.07.35.2.47.13.13.38.25.73.37l.95.3c.48.14.82.36 1.03.64q.3.405.3.93c0 .28-.06.54-.17.77-.12.22-.28.42-.5.58-.19.17-.44.29-.72.38s-.62.13-.95.13m1.25 3.24C17.89 17.14 14.71 18 12 18c-3.85 0-7.3-1.42-9.91-3.77-.21-.19-.02-.44.23-.29 2.82 1.63 6.29 2.62 9.89 2.62 2.43 0 5.1-.5 7.55-1.56.37-.15.68.26.32.53M21 14.5c-.29-.37-1.86-.18-2.57-.1-.21.03-.24-.16-.05-.3 1.25-.87 3.31-.6 3.54-.33.24.3-.06 2.36-1.23 3.34-.19.15-.36.07-.28-.11.27-.68.86-2.16.59-2.5"/></svg></span> 6) Desplegar en AWS Elastic Beanstalk (Tomcat)</h2>
+<ol>
+<li>Entra en la <strong>Consola de AWS</strong> → busca <strong>Elastic Beanstalk</strong> → <strong>Create application</strong>.<br />
 <img alt="AWS Elastic Beanstalk" src="beanstalk.png" /></li>
+<li><strong>Application name:</strong> <code>hola-war</code><br />
+<img alt="AWS Elastic Beanstalk" src="form1.png" /></li>
+<li><strong>Platform:</strong> <strong>Tomcat</strong> → <em>Corretto 17, Amazon Linux 2</em>  </li>
+<li><strong>Application code:</strong> <strong>Upload your code</strong> → sube <code>target/hola-war-0.0.1-SNAPSHOT.war</code><br />
+<img alt="AWS Elastic Beanstalk" src="form2.png" /></li>
+<li>Roles IAM: selecciona los que aparecen por defecto en los desplegables.<br />
+<img alt="AWS Elastic Beanstalk" src="form3.png" /></li>
+<li>Las siguientes pantallas de configuración son opcionales, déjalas como están por defecto y pulsa siguiente.</li>
+<li><strong>Create environment</strong> (Web server).  </li>
+<li>Espera a <strong>Health: OK</strong> y haz clic en la <strong>URL</strong> que muestra EB.
+<img alt="AWS Elastic Beanstalk" src="form5.png" /></li>
 </ol>
+<p>Deberías ver: <em>“Hola mundo desde WAR en Tomcat (Elastic Beanstalk)!”</em></p>
+<p><img alt="AWS Elastic Beanstalk" src="form6.png" /></p>
 <hr />
-<h3 id="2-crear-la-aplicacion"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 2H3c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 5H3V4h18z"/></svg></span> 2) Crear la aplicación</h3>
-<ol>
-<li>Haz clic en <strong>Create application</strong>.  </li>
-<li>Completa los datos:  </li>
-<li><strong>Application name</strong> → <code>demo-java</code><br />
-<img alt="NombreAplicacion" src="form1.png" /></li>
-<li><strong>Plataforma</strong> → <strong>Java</strong> → <em>Corretto 17 running on 64bit Amazon Linux 2</em>  </li>
-<li><strong>Código de la aplicación</strong> → <strong>Cargar el código</strong> → selecciona <code>java-eb-demo.zip</code><br />
-<img alt="SubirArchivo" src="form2.png" /></li>
-<li><strong>Políticas</strong>  → selecciona las que hay por defecto
-        <img alt="SubirArchivo" src="form3.png" /></li>
-<li>El resto de pantallas son opcionales. Pulsa siguiente hasta llegar a la final.</li>
-<li>Pulsa en <strong>Create environment</strong> (tipo <strong>Web server</strong>).</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Tiempo de espera</p>
-<p>EB creará automáticamente:<br />
-- una instancia <strong>EC2</strong><br />
-- un balanceador de carga<br />
-- grupos de seguridad y S3<br />
-<br>⏳ Aproximadamente 2–3 minutos.<br />
-<br>Continúa cuando veas <strong>Health: OK</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z"/></svg></span>.</p>
-</div>
+<h2 id="7-cambiar-el-mensaje-y-volver-a-desplegar"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg></span> 7) Cambiar el mensaje y volver a desplegar</h2>
+<p>Edita <code>HelloController.java</code>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">return</span><span class="w"> </span><span class="s">&quot;Hola, &lt;tu nombre&gt;!&quot;</span><span class="p">;</span>
+</code></pre></div></p>
+<p>Compila y despliega de nuevo:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>mvn<span class="w"> </span>clean<span class="w"> </span>package
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1"># En EB → Upload and deploy → sube el nuevo .war</span>
+</code></pre></div></p>
 <hr />
-<h3 id="3-probar-la-aplicacion"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg></span> 3) Probar la aplicación</h3>
-<p>Cuando el entorno esté listo:<br />
-- Haz clic en la <strong>URL pública</strong> que aparece arriba.<br />
-- Verás el mensaje:  </p>
-<p>Hola Mundo!</p>
-<details class="note">
-<summary>🧪 Ejercicio final: modifica, prueba en local y despliega en Elastic Beanstalk</summary>
-<h1 id="objetivo_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.4 6H20v10h-7l-.4-2H7v7H5V4h9zm-.4 8h2v-2h2v-2h-2V8h-2v2l-1-2V6h-2v2H9V6H7v2h2v2H7v2h2v-2h2v2h2v-2l1 2zm-3-4V8h2v2zm3 0h2v2h-2z"/></svg></span> Objetivo</h1>
-<p>Cambiar el texto de la app a <strong>“Hola, <tu nombre>”</strong>, <strong>compilar</strong> y <strong>probar en local</strong>, y finalmente <strong>empaquetar</strong> para <strong>subir a Elastic Beanstalk (EB)</strong>.</p>
-<div class="admonition warning">
-<p class="admonition-title">¿Qué material necesitas?</p>
-<ul>
-<li><strong>Opción A (recomendada):</strong> el <strong>proyecto completo</strong> (código fuente + <code>pom.xml</code>).<br />
-  → Podrás <strong>modificar</strong>, <strong>compilar</strong> y <strong>crear tu propio ZIP</strong> para EB.  </li>
-<li><strong>Opción B (limitada):</strong> solo un <strong>ZIP precompilado</strong> con <code>Procfile</code> + <code>target/</code>.<br />
-  → <strong>No</strong> podrás cambiar el mensaje (no hay código fuente). Pide el proyecto completo.</li>
-</ul>
-</div>
-<hr />
-<h2 id="a-si-tienes-el-proyecto-completo"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m6.75 11.5c2.75 0 3.49-2.03 3.68-3.1.91-.29 1.57-1.14 1.57-2.15C18 7 17 6 15.75 6S13.5 7 13.5 8.25c0 .94.57 1.75 1.39 2.08C14.67 11 14 12 12 12c-1.38 0-2.34.35-3 .84V8.87c.87-.31 1.5-1.14 1.5-2.12 0-1.25-1-2.25-2.25-2.25S6 5.5 6 6.75c0 .98.63 1.81 1.5 2.12v6.26c-.87.31-1.5 1.14-1.5 2.12 0 1.25 1 2.25 2.25 2.25s2.25-1 2.25-2.25c0-.93-.56-1.75-1.37-2.07.28-.68 1.1-1.68 3.62-1.68m-4.5 3a.75.75 0 0 1 .75.75.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75m0-10.5a.75.75 0 0 1 .75.75.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75m7.5 1.5a.75.75 0 0 1 .75.75.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75"/></svg></span> A) Si tienes el <strong>proyecto completo</strong></h2>
-<h3 id="1-cambia-el-mensaje">1) Cambia el mensaje</h3>
-<p>Edita la clase, por ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">helloWorld</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Hola, Laura!&quot;</span><span class="p">;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
-</code></pre></div>
-<h3 id="2-compila-y-prueba-en-local">2) Compila y prueba en local</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mvn<span class="w"> </span>clean<span class="w"> </span>package
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>java<span class="w"> </span>-jar<span class="w"> </span>target/eb-java-demo-0.0.1-SNAPSHOT.jar
-</code></pre></div>
-<p>Abre <a href="http://localhost:8080">http://localhost:8080</a> → debería mostrar <strong>Hola, <tu nombre></strong>.</p>
-<div class="admonition tip">
-<p class="admonition-title">¿No sabes el nombre exacto del JAR?</p>
-<p>Mira qué JAR creó Maven:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ls<span class="w"> </span>target/*.jar
-</code></pre></div>
-Si es distinto, úsalo en <code>java -jar ...</code>.</p>
-</div>
-<h3 id="3-empaqueta-para-elastic-beanstalk">3) Empaqueta para Elastic Beanstalk</h3>
-<p>Crea un ZIP con <strong>exactamente</strong>:
-- <code>Procfile</code> (en la <strong>raíz</strong> del ZIP)
-- la carpeta <code>target/</code> con tu <code>.jar</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>zip<span class="w"> </span>-r<span class="w"> </span>java-eb-demo.zip<span class="w"> </span>Procfile<span class="w"> </span>target/
-</code></pre></div>
-<p><strong>Procfile</strong> (en la <strong>raíz del proyecto</strong>):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>web: java -Dserver.port=$PORT -jar target/eb-java-demo-0.0.1-SNAPSHOT.jar
-</code></pre></div>
-<blockquote>
-<p>Si el nombre del jar cambia, actualiza esa línea, o usa esta variante robusta:</p>
-</blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>web: bash -lc &#39;java -Dserver.port=$PORT -jar $(ls target/*.jar | head -n1)&#39;
-</code></pre></div>
-<h3 id="4-sube-a-elastic-beanstalk">4) Sube a Elastic Beanstalk</h3>
-<ol>
-<li>AWS Console → <strong>Elastic Beanstalk</strong> → tu <strong>entorno</strong> → <strong>Upload and deploy</strong>.  </li>
-<li>Sube <code>java-eb-demo.zip</code>.  </li>
-<li>Espera <strong>Health: OK</strong> → abre la <strong>URL pública</strong> → verás tu mensaje.</li>
-</ol>
-<hr />
-<h2 id="b-si-solo-tienes-un-zip-precompilado"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m5.12 5 .81-1h12l.94 1M12 17.5 6.5 12H10v-2h4v2h3.5zm8.54-12.27-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6 3 6.5V19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.5c0-.5-.17-.93-.46-1.27"/></svg></span> B) Si solo tienes un <strong>ZIP precompilado</strong></h2>
-<p>Con un ZIP que contiene <strong><code>Procfile</code> + <code>target/</code></strong> <strong>no</strong> puedes cambiar el texto: faltarían los fuentes.<br />
-Pide el <strong>proyecto completo</strong> o descarga uno de ejemplo, edítalo y sigue los pasos del apartado A.</p>
-<hr />
-<h2 id="checklist-rapido"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 10H3v2h11zm0-4H3v2h11zM3 16h7v-2H3zm18.5-4.5L23 13l-7 7-4.5-4.5L13 14l3 3z"/></svg></span> Checklist rápido</h2>
-<ul>
-<li>[ ] Modifiqué el texto en el código fuente.  </li>
-<li>[ ] Compilé: <code>mvn clean package</code> sin errores.  </li>
-<li>[ ] Probé local: <code>java -jar target/&lt;mi-jar&gt;.jar</code> → “Hola, <mi nombre>”.  </li>
-<li>[ ] Creé <code>java-eb-demo.zip</code> con <strong>Procfile</strong> + <strong>target/</strong>.  </li>
-<li>[ ] Desplegué en EB y vi <strong>Health: OK</strong>.  </li>
-</ul>
-<hr />
-<h2 id="problemas-tipicos-y-solucion"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.79 15.41c.95-2.17.95-4.66 0-6.82l-2.74 1.24c.6 1.38.6 2.95.01 4.34zm-4.37-11.2a8.54 8.54 0 0 0-6.83 0l1.24 2.73c1.39-.59 2.96-.59 4.35.01zM4.21 8.58a8.56 8.56 0 0 0 0 6.84l2.74-1.25c-.6-1.38-.6-2.96 0-4.35zm4.38 11.21a8.5 8.5 0 0 0 6.83-.01l-1.24-2.73a5.5 5.5 0 0 1-4.34.01zM12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 6a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4"/></svg></span> Problemas típicos y solución</h2>
+<h2 id="8-solucion-de-problemas"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.79 15.41c.95-2.17.95-4.66 0-6.82l-2.74 1.24c.6 1.38.6 2.95.01 4.34zm-4.37-11.2a8.54 8.54 0 0 0-6.83 0l1.24 2.73c1.39-.59 2.96-.59 4.35.01zM4.21 8.58a8.56 8.56 0 0 0 0 6.84l2.74-1.25c-.6-1.38-.6-2.96 0-4.35zm4.38 11.21a8.5 8.5 0 0 0 6.83-.01l-1.24-2.73a5.5 5.5 0 0 1-4.34.01zM12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 6a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4"/></svg></span> 8) Solución de problemas</h2>
 <details class="question">
-<summary>EB falla con 502 / Health rojo</summary>
+<summary>502 Bad Gateway / Health rojo</summary>
 <ul>
-<li>Asegúrate de que el <strong><code>Procfile</code></strong> está en la <strong>raíz del ZIP</strong>.  </li>
-<li>Confirma que el nombre del <code>.jar</code> del <code>Procfile</code> coincide con el real.  </li>
-<li>Usa la variante <code>bash -lc '... *.jar'</code> si el nombre cambia.  </li>
-<li>Revisa logs en EB → <strong>Logs → Request logs → Last 100 lines</strong>.</li>
+<li>Revisa que la <strong>plataforma</strong> es <strong>Tomcat (Corretto 17)</strong>, no Java SE.</li>
+<li>Saca <strong>Logs → Request logs → Last 100 lines</strong> y mira <code>catalina.out</code> / <code>web.stderr.log</code>.</li>
 </ul>
 </details>
 <details class="question">
 <summary>No arranca en local</summary>
 <ul>
-<li>Comprueba la versión de Java (<code>java -version</code>) y que el JAR existe (<code>ls target/*.jar</code>).  </li>
-<li>Vuelve a compilar con <code>mvn clean package</code> y mira errores de compilación.</li>
+<li>Usa <code>mvn spring-boot:run</code> (o <code>./mvnw spring-boot:run</code>).</li>
+<li>Comprueba <code>java -version</code> = 17.</li>
 </ul>
 </details>
+<details class="question">
+<summary>Generé con Java 21</summary>
+<ul>
+<li>EB Tomcat usa <strong>Corretto 17</strong> → reconstruye el proyecto con Java <strong>17</strong>.</li>
+</ul>
 </details>
+<hr />
+<h2 id="9-limpieza-evitar-costes"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.36 2.72 1.42 1.42-5.72 5.71c1.07 1.54 1.22 3.39.32 4.59L9.06 8.12c1.2-.9 3.05-.75 4.59.32zM5.93 17.57c-2.01-2.01-3.24-4.41-3.58-6.65l4.88-2.09 7.44 7.44-2.09 4.88c-2.24-.34-4.64-1.57-6.65-3.58"/></svg></span> 9) Limpieza (evitar costes)</h2>
+<p>En Elastic Beanstalk → tu entorno → <strong>Actions → Terminate environment</strong>.<br />
+(Opcional: elimina la <strong>Application</strong> y el <strong>bucket S3</strong> si no la vas a reutilizar.)</p>
+<hr />
+<h2 id="checklist-final"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9 20.42-6.21-6.21 2.83-2.83L9 14.77l9.88-9.89 2.83 2.83z"/></svg></span> Checklist final</h2>
+<ul>
+<li>[ ] Proyecto Spring Boot <strong>WAR</strong> creado con Java 17.  </li>
+<li>[ ] <code>ServletInitializer</code> añadido.  </li>
+<li>[ ] <code>HelloController</code> con <code>@GetMapping("/")</code>.  </li>
+<li>[ ] Probado local con <code>spring-boot:run</code>.  </li>
+<li>[ ] <code>.war</code> empaquetado y subido a <strong>EB Tomcat</strong>.  </li>
+<li>[ ] URL pública mostrando el <em>Hola Mundo</em>.  </li>
+</ul>
 
 
 
