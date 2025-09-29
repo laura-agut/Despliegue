@@ -71,6 +71,7 @@ extra_css:
 nav:
   - ... | index.md
   - ... | Ud0 Introduccion/*.md
+  - ... | Ud1 Control de versiones/*.md
 #  - ... | Unidad 2/*.md
 #  - ... | Unidad 3/*.md
 #  - ... | Unidad 4/*.md
