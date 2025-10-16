@@ -72,7 +72,12 @@ nav:
   - ... | index.md
   - ... | Ud0 Introduccion/*.md
   - ... | Ud1 Control de versiones/*.md
-#  - ... | Unidad 2/*.md
+  - ... | Ud2 Contenedores/*.md
+  - ... | Ud3 CI-CD/*.md
+  - ... | Ud4 Servidores web/*.md
+  - ... | Ud5 Servidores de aplicaciones/*.md
+  - ... | Ud6 Servicios de red DNS y LDAP/*.md
+  - ... | Ud7 Servicios de red FTP/*.md
 #  - ... | Unidad 3/*.md
 #  - ... | Unidad 4/*.md
 #  - ... | Unidad 5/*.md

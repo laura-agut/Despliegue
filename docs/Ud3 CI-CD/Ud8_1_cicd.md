@@ -1,5 +1,5 @@
 ---
-title: '8.1 - CI/CD (Integración y despliegue continuo)'
+title: '3.1 - CI/CD (Integración y despliegue continuo)'
 ---
 
 # CI/CD (Integración y despliegue continuo) 
